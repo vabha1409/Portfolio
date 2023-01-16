@@ -1,0 +1,272 @@
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 80vh;
+            background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(cvimage.jfif)  
+        }
+        nav ul{
+            display: flex;
+            list-style-type:none;
+            justify-content: center;
+        }
+        li{
+            margin-top: 20px;
+            margin-left: 10px;
+            padding-right: 10px;
+            color: white;
+            list-style: none;
+        }
+        a{
+            list-style: none;
+            color:white;
+        }
+        #cv{
+            margin-right:350px;
+            align-items: flex-start;
+        }
+        .name{
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+        }
+        input[type="button"]{
+            width: 90px;
+            color: white;
+            text-align: center;
+            background-color: green;
+
+            margin-top: 30px;
+            padding:2px;
+        }
+         img#r1{
+            border-radius: 90px;
+        }
+        #r2,#r3{
+            height:35px;
+            margin-top: 130px;
+            padding: 5px;
+            border-radius: 40px;
+        }
+        .container{
+            border: 1px  black;
+            border-style:solid; 
+            box-shadow:2px 2px 2px black;
+            margin-top: 50px;
+            margin-left: 190px;
+            margin-right: 190px;
+            margin-bottom: 50px;
+            padding-left:8px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            display: flex;
+            border-radius: 8px;
+            outline: none;
+        }
+        h3{
+            padding-bottom: 8px;
+            text-align: center;
+        }
+        #h1,#h2{
+            text-align:left ;
+        }
+        .box1{
+               padding-right: 80px;
+        }
+        #boy{
+            text-align: center;
+        }
+        .container1{
+            border: 1px solid black;
+            box-shadow:2px 2px 2px black;
+            margin-top: 20px;
+            margin-left: 190px;
+            margin-right: 190px;
+            margin-bottom: 40px;
+            padding-left:8px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            border-radius: 8px;
+        }
+        .container1{
+            display: flex;
+        }
+        #file{
+            width:350px;
+            margin-right: 100px;  
+        }
+        #file1{
+            width:350px;
+        }
+        #file2{
+            width: 350px;
+            margin-right: 800px;
+        }
+        progress{
+            background-color: green;
+        }
+        #boy5{
+            text-align: center;
+        }
+        #boy6{
+            text-align: center;
+        }
+        .container3{
+            margin-top: 20px;
+            margin-left: 250px;
+            margin-right: 250px;
+            margin-bottom: 20px;    
+        }
+        .container3 a:hover{
+            background-color:red; 
+        }
+        .container4{
+            border: 1px solid black;
+            box-shadow:2px 2px 2px black;
+            margin-top: 20px;
+            margin-left: 190px;
+            margin-right: 190px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+        }
+        .girl1{
+            background-color: green;
+            padding-top: 50px;
+            padding-left: 50px;
+            padding-bottom: 50px;
+            padding-right: 105px;
+            margin-right: 100px;
+            border-radius: 8px;
+            color: white;
+        }
+        .girl2{
+            text-align: center;
+            padding-top: 40px;
+        }
+        .container5{
+            border: 1px solid black;
+            box-shadow:2px 2px 2px black;
+            margin-top: 20px;
+            margin-left: 190px;
+            margin-right: 190px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+        }
+        .girl3{
+            background-color: green;
+            padding: 50px;
+            margin-right: 100px;
+            border-radius: 8px;
+            color: white;
+        }
+        .girl4{
+            text-align: center;
+            padding-top: 40px;
+        }
+        .container6{
+            border: 1px solid black;
+            box-shadow:2px 2px 2px black;
+            margin-top: 20px;
+            margin-left: 190px;
+            margin-right: 190px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+        }
+        .girl5{
+            background-color: green;
+            padding: 50px;
+            margin-right: 100px;
+            border-radius: 8px;
+            color: white;
+        }
+        .girl6{
+            text-align: center;
+            padding-top: 40px;
+        }
+        .container7{
+            border: 1px solid black;
+            box-shadow:2px 2px 2px black;
+            margin-top: 20px;
+            margin-left: 190px;
+            margin-right: 190px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+        }
+        .girl7{
+            background-color: green;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 50px;
+            padding-right: 110px;
+            margin-right: 100px;
+            border-radius: 8px;
+            color: white;
+        }
+        .girl8{
+            text-align: center;
+            padding-top: 40px;
+        }
+        .map{
+            background-image: url(https://www.resortsinmumbai.co.in/puri_large.JPG);
+            height:100vh;
+            display: flex;    
+        }
+        .main{
+            border: 1px solid black;
+            display: flex;
+            margin-left: 300px;
+            margin-right: 220px;
+            background-color: white;
+            margin-top:80px;
+            padding-left: 20px;
+            margin-bottom: 80px;
+            border-radius: 10px;    
+        }
+        .contact{
+            padding-right: 80px;
+            padding-top: 20px;    
+        }
+        
+        input[type=text]{
+            margin-top: 20px;
+            height:30px;
+            width:200px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        input[type=email]{
+            margin-top: 20px;
+            height:30px;
+            width:200px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        textarea{
+            margin-top: 20px;
+        }
+        input[type=submit]{
+            margin-top: 20px;
+            border-radius: 20px;
+            width: 60px;
+            height:25px;
+            background-color: green;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .contact2{
+            padding-top: 20px;
+            padding-right:20px;
+            line-height: 30px;
+        }
+        #feel{
+            font-weight: bold;
+        }
+        #n1,#n2,#n3{
+            font-weight: bold;
+        }
