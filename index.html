@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaibhav Gourkhede | Data &amp; Crypto Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050508;--surf:#0d0d16;--surf2:#131320;--surf3:#1a1a2a;
+  --bdr:rgba(255,255,255,0.06);--bdr2:rgba(255,255,255,0.1);
+  --green:#00ff87;--gdim:rgba(0,255,135,0.08);--gbdr:rgba(0,255,135,0.2);
+  --blue:#00d4ff;--bdim:rgba(0,212,255,0.08);
+  --purple:#9b5de5;--pdim:rgba(155,93,229,0.08);
+  --orange:#ff9f43;--odim:rgba(255,159,67,0.08);
+  --red:#ff4757;
+  --tx:#e2e2f0;--tx2:#8888b0;--tx3:#50507a;
+  --mono:'Space Mono',monospace;--sans:'Outfit',sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,255,135,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,135,0.012) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;z-index:0}
+.glow{position:fixed;border-radius:50%;filter:blur(150px);pointer-events:none;z-index:0}
+.g1{width:650px;height:650px;background:rgba(0,255,135,0.03);top:-180px;right:-180px}
+.g2{width:500px;height:500px;background:rgba(0,212,255,0.04);bottom:0;left:-120px}
+.g3{width:380px;height:380px;background:rgba(155,93,229,0.03);top:45%;left:38%}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:0 60px;height:62px;background:rgba(5,5,8,0.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--bdr)}
+.nav-brand{font-family:var(--mono);font-size:0.82rem;color:var(--green);letter-spacing:0.05em}
+.nav-brand span{color:var(--tx3)}
+.blink{display:inline-block;width:7px;height:13px;background:var(--green);animation:blink 1s step-end infinite;vertical-align:text-bottom;margin-left:3px}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.nav-links{display:flex;gap:4px;list-style:none}
+.nav-links a{color:var(--tx2);text-decoration:none;font-size:0.77rem;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;padding:6px 13px;border-radius:5px;transition:all .2s}
+.nav-links a:hover{color:var(--tx);background:var(--surf2)}
+.nav-hire{background:var(--green)!important;color:#000!important;font-weight:700!important}
+.nav-hire:hover{background:#00ffaa!important}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding:110px 60px 70px;max-width:1280px;margin:0 auto;position:relative;z-index:1;gap:48px}
+.hero-l{flex:1;max-width:680px}
+.hero-r{flex:0 0 260px;display:flex;flex-direction:column;gap:10px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:0.72rem;color:var(--green);background:var(--gdim);border:1px solid var(--gbdr);border-radius:5px;padding:6px 14px;margin-bottom:26px;animation:fup .5s ease both}
+.tag::before{content:'>';color:var(--tx3)}
+h1{font-family:var(--sans);font-size:clamp(2.5rem,5vw,4.2rem);font-weight:800;line-height:1.04;letter-spacing:-.03em;margin-bottom:8px;animation:fup .5s .08s ease both}
+.gtext{background:linear-gradient(90deg,var(--green) 0%,var(--blue) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.subtitle{font-family:var(--mono);font-size:clamp(0.9rem,1.8vw,1.1rem);color:var(--tx2);margin-bottom:26px;animation:fup .5s .14s ease both}
+.hero-bio{font-size:.97rem;color:var(--tx2);max-width:540px;line-height:1.8;margin-bottom:34px;animation:fup .5s .2s ease both}
+.hero-bio strong{color:var(--tx);font-weight:500}
+.btns{display:flex;gap:10px;flex-wrap:wrap;animation:fup .5s .26s ease both}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;border-radius:7px;font-size:.86rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;font-family:var(--sans);transition:all .2s;letter-spacing:.01em}
+.btn-g{background:var(--green);color:#000}
+.btn-g:hover{background:#00ffaa;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,255,135,.22)}
+.btn-o{background:transparent;color:var(--tx);border:1px solid var(--bdr2)}
+.btn-o:hover{border-color:rgba(255,255,255,.18);background:var(--surf2);transform:translateY(-2px)}
+.metrics{display:flex;gap:0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);margin-top:44px;animation:fup .5s .32s ease both}
+.met{flex:1;padding:22px 0;border-right:1px solid var(--bdr);text-align:center}
+.met:last-child{border-right:none}
+.met-v{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--green)}
+.met-l{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tx3);margin-top:3px}
+@keyframes fup{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* TICKER */
+.tick{background:var(--surf2);border:1px solid var(--bdr);border-radius:10px;padding:13px 16px;font-family:var(--mono);font-size:.73rem;animation:fup .5s .3s ease both;transition:border-color .2s}
+.tick:hover{border-color:var(--bdr2)}
+.tick-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.tick-sym{color:var(--tx2)}
+.up{color:var(--green);font-size:.68rem}
+.dn{color:var(--red);font-size:.68rem}
+.tick-p{font-size:.95rem;color:var(--tx);font-weight:700}
+.tick-bar{height:2px;background:var(--surf3);border-radius:2px;overflow:hidden;margin-top:7px}
+.tick-f{height:100%;border-radius:2px}
+
+/* SECTIONS */
+.section{position:relative;z-index:1;padding:88px 0}
+.container{max-width:1280px;margin:0 auto;padding:0 60px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:13px}
+.eyebrow::before{content:'//';color:var(--tx3)}
+.sec-h{font-family:var(--sans);font-size:clamp(1.75rem,2.8vw,2.5rem);font-weight:800;letter-spacing:-.03em;margin-bottom:11px;line-height:1.1}
+.sec-sub{color:var(--tx2);font-size:.93rem;max-width:490px;line-height:1.75;margin-bottom:52px}
+
+/* ABOUT */
+#about{background:linear-gradient(180deg,var(--bg) 0%,var(--surf) 50%,var(--bg) 100%)}
+.about-g{display:grid;grid-template-columns:3fr 2fr;gap:68px;align-items:start}
+.about-body p{color:var(--tx2);line-height:1.85;margin-bottom:16px;font-size:.95rem}
+.about-body p strong{color:var(--tx);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}
+.chip{font-size:.73rem;font-weight:600;padding:5px 11px;border-radius:4px;font-family:var(--mono);letter-spacing:.03em}
+.cg{background:var(--gdim);border:1px solid var(--gbdr);color:var(--green)}
+.cb{background:var(--bdim);border:1px solid rgba(0,212,255,.2);color:var(--blue)}
+.cp{background:var(--pdim);border:1px solid rgba(155,93,229,.25);color:var(--purple)}
+.co{background:var(--odim);border:1px solid rgba(255,159,67,.2);color:var(--orange)}
+.info-panel{background:var(--surf2);border:1px solid var(--bdr);border-radius:12px;overflow:hidden}
+.ip-head{background:var(--surf3);border-bottom:1px solid var(--bdr);padding:11px 18px;font-family:var(--mono);font-size:.7rem;color:var(--tx3);letter-spacing:.07em}
+.ir{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--bdr);font-size:.83rem}
+.ir:last-child{border-bottom:none}
+.ik{color:var(--tx3);font-family:var(--mono);font-size:.72rem}
+.iv{color:var(--tx);font-weight:500}
+.sdot{display:inline-flex;align-items:center;gap:6px;color:var(--green)}
+.sdot::before{content:'';width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+
+/* SKILLS */
+.sk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.sk-block{background:var(--surf2);border:1px solid var(--bdr);border-radius:12px;padding:22px 26px;transition:border-color .2s}
+.sk-block:hover{border-color:var(--bdr2)}
+.sk-title{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{background:rgba(255,255,255,.04);border:1px solid var(--bdr2);border-radius:5px;padding:5px 10px;font-size:.77rem;font-weight:500;color:var(--tx2);transition:all .18s}
+.pill:hover{color:var(--tx);background:rgba(255,255,255,.07)}
+
+/* PROJECTS */
+#projects{background:linear-gradient(180deg,var(--bg) 0%,var(--surf) 60%,var(--bg) 100%)}
+.proj-list{display:flex;flex-direction:column;gap:18px}
+.pcard{background:var(--surf2);border:1px solid var(--bdr);border-radius:14px;padding:30px 34px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start;transition:all .25s;position:relative;overflow:hidden}
+.pcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green);opacity:0;transition:opacity .25s}
+.pcard:hover{border-color:var(--bdr2);transform:translateX(4px)}
+.pcard:hover::before{opacity:1}
+.pcard.blue::before{background:var(--blue)}
+.pcard.purple::before{background:var(--purple)}
+.ph{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.pico{font-size:1.2rem}
+.pname{font-family:var(--sans);font-size:1.1rem;font-weight:700;color:var(--tx)}
+.pbadge{font-family:var(--mono);font-size:.63rem;text-transform:uppercase;letter-spacing:.09em;padding:3px 8px;border-radius:3px;font-weight:700}
+.bf{background:var(--gdim);border:1px solid var(--gbdr);color:var(--green)}
+.bl{background:var(--bdim);border:1px solid rgba(0,212,255,.2);color:var(--blue)}
+.bpu{background:var(--pdim);border:1px solid rgba(155,93,229,.25);color:var(--purple)}
+.pdesc{color:var(--tx2);font-size:.88rem;line-height:1.75;margin-bottom:14px}
+.pstack{display:flex;flex-wrap:wrap;gap:6px}
+.stag{font-family:var(--mono);font-size:.68rem;background:rgba(255,255,255,.03);border:1px solid var(--bdr);border-radius:4px;padding:3px 8px;color:var(--tx3)}
+.plc{display:flex;flex-direction:column;gap:9px;min-width:120px}
+.plink{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font-size:.78rem;font-weight:600;padding:9px 14px;border-radius:7px;transition:all .18s;white-space:nowrap}
+.plgh{background:rgba(255,255,255,.05);border:1px solid var(--bdr2);color:var(--tx2)}
+.plgh:hover{color:var(--tx);background:rgba(255,255,255,.09)}
+.pllive{background:var(--gdim);border:1px solid var(--gbdr);color:var(--green)}
+.pllive:hover{background:rgba(0,255,135,.15);transform:translateY(-1px)}
+.plpbi{background:var(--odim);border:1px solid rgba(255,159,67,.2);color:var(--orange)}
+.plpbi:hover{background:rgba(255,159,67,.14);transform:translateY(-1px)}
+
+/* EXPERIENCE */
+.exp-g{display:grid;grid-template-columns:3fr 2fr;gap:68px}
+.tl{position:relative;padding-left:22px}
+.tl::before{content:'';position:absolute;left:5px;top:8px;bottom:0;width:1px;background:var(--bdr2)}
+.tli{position:relative;margin-bottom:40px}
+.tld{position:absolute;left:-22px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--green);border:2px solid var(--bg);box-shadow:0 0 0 1px var(--green)}
+.tld.b{background:var(--blue);box-shadow:0 0 0 1px var(--blue)}
+.tld.p{background:var(--purple);box-shadow:0 0 0 1px var(--purple)}
+.tldate{font-family:var(--mono);font-size:.68rem;color:var(--green);letter-spacing:.07em;margin-bottom:5px}
+.tlrole{font-size:.97rem;font-weight:700;margin-bottom:3px}
+.tlorg{font-size:.82rem;color:var(--tx3);margin-bottom:10px}
+.tlpts{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px}
+.tlpts li{font-size:.83rem;color:var(--tx2);line-height:1.6;padding-left:13px;position:relative}
+.tlpts li::before{content:'›';position:absolute;left:0;color:var(--green)}
+.cert-panel{background:var(--surf2);border:1px solid var(--bdr);border-radius:12px;overflow:hidden}
+.cp-head{background:var(--surf3);border-bottom:1px solid var(--bdr);padding:11px 18px;font-family:var(--mono);font-size:.7rem;color:var(--tx3);letter-spacing:.07em}
+.ci{display:flex;align-items:flex-start;gap:12px;padding:14px 18px;border-bottom:1px solid var(--bdr);transition:background .2s}
+.ci:last-child{border-bottom:none}
+.ci:hover{background:rgba(255,255,255,.02)}
+.cico{width:30px;height:30px;border-radius:7px;flex-shrink:0;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem}
+.cname{font-size:.82rem;font-weight:500;color:var(--tx)}
+.ciss{font-size:.73rem;color:var(--tx3);font-family:var(--mono);margin-top:2px}
+
+/* CONTACT */
+#contact{background:linear-gradient(180deg,var(--bg) 0%,var(--surf) 100%)}
+.con-g{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.clinks{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.clink{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:10px;background:var(--surf2);border:1px solid var(--bdr);text-decoration:none;color:var(--tx);font-size:.86rem;font-weight:500;transition:all .2s}
+.clink:hover{border-color:var(--bdr2);transform:translateX(4px);background:var(--surf3)}
+.cico2{width:34px;height:34px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.csub{font-size:.72rem;color:var(--tx3);font-family:var(--mono);margin-top:1px}
+.form{display:flex;flex-direction:column;gap:13px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.flbl{font-size:.71rem;font-family:var(--mono);color:var(--tx3);letter-spacing:.07em;margin-bottom:5px;text-transform:uppercase}
+.form input,.form textarea{width:100%;background:var(--surf2);border:1px solid var(--bdr);border-radius:7px;padding:12px 15px;color:var(--tx);font-family:var(--sans);font-size:.88rem;outline:none;transition:border-color .2s}
+.form input:focus,.form textarea:focus{border-color:rgba(0,255,135,.3)}
+.form input::placeholder,.form textarea::placeholder{color:var(--tx3)}
+.form textarea{resize:vertical;min-height:118px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.fl{font-family:var(--mono);font-size:.72rem;color:var(--tx3)}
+.fl span{color:var(--green)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .62s ease,transform .62s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--surf3);border-radius:2px}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  nav{padding:0 20px}.nav-links{display:none}
+  #hero{padding:90px 20px 60px;flex-direction:column}
+  .hero-r{margin:0;flex-direction:row;overflow-x:auto;flex:unset;width:100%}
+  .container{padding:0 20px}
+  .about-g,.sk-grid,.exp-g,.con-g{grid-template-columns:1fr}
+  .pcard{grid-template-columns:1fr}
+  .plc{flex-direction:row;flex-wrap:wrap}
+  footer{padding:20px;flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">vaibhav<span>.gourkhede</span><span class="blink"></span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="nav-hire">Hire Me</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-l">
+    <div class="tag">open_to_work &nbsp;&#47;&#47;&nbsp; crypto &middot; data &middot; remote<span class="blink"></span></div>
+    <h1><span class="gtext">Data &amp; Crypto</span><br>Analyst</h1>
+    <p class="subtitle">// AI &middot; On-Chain Analytics &middot; ML &middot; Power BI</p>
+    <p class="hero-bio">
+      <strong>IBM AI/ML Intern</strong> turned blockchain data analyst. I build production-grade on-chain toolkits, ML-powered prediction models, and live market dashboards. Specializing in <strong>crypto analytics, DeFi research,</strong> and <strong>data-driven investment insights</strong> backed by Python, SQL, and multi-chain API expertise.
+    </p>
+    <div class="btns">
+      <a href="#projects" class="btn btn-g">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        View Projects
+      </a>
+      <a href="mailto:gourkhedevaibhav@gmail.com" class="btn btn-o">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Contact Me
+      </a>
+      <a href="https://github.com/vabha1409" target="_blank" class="btn btn-o">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="metrics">
+      <div class="met"><div class="met-v">5+</div><div class="met-l">IBM Certs</div></div>
+      <div class="met"><div class="met-v">8</div><div class="met-l">APIs Integrated</div></div>
+      <div class="met"><div class="met-v">3</div><div class="met-l">Projects Built</div></div>
+      <div class="met"><div class="met-v">IBM</div><div class="met-l">AI/ML Intern</div></div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="tick">
+      <div class="tick-top"><span class="tick-sym">BTC/USD</span><span class="up">&#9650; +2.4%</span></div>
+      <div class="tick-p">$104,820</div>
+      <div class="tick-bar"><div class="tick-f" style="width:78%;background:var(--green)"></div></div>
+    </div>
+    <div class="tick">
+      <div class="tick-top"><span class="tick-sym">ETH/USD</span><span class="up">&#9650; +1.9%</span></div>
+      <div class="tick-p">$3,840</div>
+      <div class="tick-bar"><div class="tick-f" style="width:62%;background:var(--blue)"></div></div>
+    </div>
+    <div class="tick">
+      <div class="tick-top"><span class="tick-sym">SOL/USD</span><span class="dn">&#9660; -0.7%</span></div>
+      <div class="tick-p">$172.50</div>
+      <div class="tick-bar"><div class="tick-f" style="width:44%;background:var(--purple)"></div></div>
+    </div>
+    <div class="tick" style="background:rgba(0,255,135,0.05);border-color:var(--gbdr)">
+      <div class="tick-top"><span class="tick-sym" style="color:var(--green)">CHAINPULSE</span><span class="up">LIVE &#9679;</span></div>
+      <div class="tick-p" style="font-size:.78rem;color:var(--tx2);margin-top:3px">Multi-chain CLI Toolkit</div>
+      <div style="font-family:var(--mono);font-size:.65rem;color:var(--tx3);margin-top:4px">ETH &middot; BTC &middot; SOL &middot; ARB</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-g">
+      <div class="reveal">
+        <div class="eyebrow">About Me</div>
+        <h2 class="sec-h">Analyst. Builder.<br>Blockchain Explorer.</h2>
+        <div class="about-body">
+          <p>I'm a <strong>Data &amp; Crypto Analyst</strong> from Nagpur, India with an IBM AI/ML internship and a deep passion for on-chain data. I don't just read charts &mdash; I build the tools that generate them.</p>
+          <p>My flagship project <strong>ChainPulse</strong> is a production-grade multi-chain CLI toolkit covering whale tracking, smart money detection, DeFi health analysis, and cross-chain capital rotation signals &mdash; integrated with 8 live data sources across ETH, BTC, SOL, and ARB.</p>
+          <p>I'm seeking a <strong>remote Crypto Analyst or Data Analyst role</strong> where I can apply on-chain analytics, ML modeling, and data visualization to drive real investment decisions.</p>
+        </div>
+        <div class="chips">
+          <span class="chip cg">On-Chain Analytics</span>
+          <span class="chip cb">AI / ML</span>
+          <span class="chip cg">DeFi Research</span>
+          <span class="chip cp">Blockchain</span>
+          <span class="chip co">Power BI</span>
+          <span class="chip cb">Python</span>
+          <span class="chip cg">Whale Tracking</span>
+          <span class="chip cp">Smart Money Detection</span>
+          <span class="chip co">Technical Analysis</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="info-panel">
+          <div class="ip-head">// profile.json</div>
+          <div class="ir"><span class="ik">location</span><span class="iv">Nagpur, India &#127470;&#127475;</span></div>
+          <div class="ir"><span class="ik">email</span><span class="iv" style="font-size:.78rem">gourkhedevaibhav@gmail.com</span></div>
+          <div class="ir"><span class="ik">phone</span><span class="iv">+91 9158387386</span></div>
+          <div class="ir"><span class="ik">github</span><span class="iv">vabha1409</span></div>
+          <div class="ir"><span class="ik">portfolio</span><span class="iv" style="font-size:.78rem">vaibhavgourkhede.netlify.app</span></div>
+          <div class="ir"><span class="ik">seeking</span><span class="iv" style="font-size:.81rem">Crypto / Data Analyst</span></div>
+          <div class="ir"><span class="ik">preferred</span><span class="iv">Remote</span></div>
+          <div class="ir"><span class="ik">status</span><span class="iv"><span class="sdot">Open to Work</span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Tech Stack</div>
+      <h2 class="sec-h">Skills &amp; Expertise</h2>
+      <p class="sec-sub">Spanning on-chain analytics, data science, machine learning, and web development.</p>
+    </div>
+    <div class="sk-grid">
+      <div class="sk-block reveal">
+        <div class="sk-title"><span style="color:var(--green)">&#9679;</span> Crypto &amp; Blockchain</div>
+        <div class="pills">
+          <span class="pill">On-Chain Data Analysis</span><span class="pill">Multi-chain API Integration</span><span class="pill">Whale Tracking</span><span class="pill">Smart Money Detection</span><span class="pill">DeFi Protocol Research</span><span class="pill">Gini Coefficient</span><span class="pill">Tokenomics</span><span class="pill">CoinGecko API</span><span class="pill">Etherscan API</span><span class="pill">DeFiLlama API</span><span class="pill">Glassnode Metrics</span><span class="pill">RSI &middot; MACD &middot; Moving Averages</span><span class="pill">Cross-chain Capital Rotation</span>
+        </div>
+      </div>
+      <div class="sk-block reveal">
+        <div class="sk-title"><span style="color:var(--blue)">&#9679;</span> Data Science &amp; ML</div>
+        <div class="pills">
+          <span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span><span class="pill">Scikit-learn</span><span class="pill">TensorFlow</span><span class="pill">PyTorch</span><span class="pill">Random Forest</span><span class="pill">Decision Trees</span><span class="pill">Regression</span><span class="pill">Classification</span><span class="pill">Feature Engineering</span><span class="pill">Jupyter Notebook</span><span class="pill">Google Colab</span>
+        </div>
+      </div>
+      <div class="sk-block reveal">
+        <div class="sk-title"><span style="color:var(--orange)">&#9679;</span> Visualization &amp; Databases</div>
+        <div class="pills">
+          <span class="pill">Power BI</span><span class="pill">MS Excel</span><span class="pill">SQL</span><span class="pill">MySQL</span><span class="pill">MongoDB</span><span class="pill">IBM Cloud</span>
+        </div>
+      </div>
+      <div class="sk-block reveal">
+        <div class="sk-title"><span style="color:var(--purple)">&#9679;</span> Languages &amp; Frameworks</div>
+        <div class="pills">
+          <span class="pill">JavaScript</span><span class="pill">PHP</span><span class="pill">HTML5 / CSS3</span><span class="pill">Django</span><span class="pill">Flask</span><span class="pill">Laravel</span><span class="pill">Angular</span><span class="pill">Bootstrap</span><span class="pill">Express</span><span class="pill">jQuery</span><span class="pill">Git &amp; GitHub</span><span class="pill">Linux</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Projects</div>
+      <h2 class="sec-h">Things I've Built</h2>
+      <p class="sec-sub">Production-grade tools from multi-chain CLI analysis to ML prediction models and live dashboards.</p>
+    </div>
+    <div class="proj-list">
+
+      <!-- ChainPulse -->
+      <div class="pcard reveal">
+        <div>
+          <div class="ph">
+            <span class="pico">&#9935;&#65039;</span>
+            <span class="pname">ChainPulse</span>
+            <span class="pbadge bf">Featured</span>
+          </div>
+          <p class="pdesc">Production-grade multi-chain on-chain analysis CLI toolkit with 6 modules: whale tracker, DeFi health analyzer, token distribution analyzer (Gini coefficient), smart money detector, cross-chain aggregator, and deep wallet profiler. Integrates 8 live data sources &mdash; Etherscan, DeFiLlama, CoinGecko, Blockstream, Solana RPC, BscScan, Arbiscan, Moralis &mdash; with TTL disk caching and automatic rate-limit handling across ETH, BTC, SOL, and ARB.</p>
+          <div class="pstack">
+            <span class="stag">Python</span><span class="stag">Etherscan API</span><span class="stag">DeFiLlama API</span><span class="stag">CoinGecko API</span><span class="stag">Blockstream</span><span class="stag">Solana RPC</span><span class="stag">BscScan</span><span class="stag">Moralis</span><span class="stag">Rich CLI</span><span class="stag">Multi-chain</span>
+          </div>
+        </div>
+        <div class="plc">
+          <a href="https://github.com/vabha1409/chainpulse" target="_blank" class="plink plgh">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Crypto Dashboard -->
+      <div class="pcard blue reveal">
+        <div>
+          <div class="ph">
+            <span class="pico">&#128202;</span>
+            <span class="pname">Crypto Market Dashboard</span>
+            <span class="pbadge bl">Live</span>
+          </div>
+          <p class="pdesc">Cryptocurrency analytics dashboard fetching live price, volume, and market cap data via CoinGecko API. Performed on-chain trend analysis and visualized BTC/ETH price movements and dominance metrics in Power BI. Integrated RSI and moving average indicators to identify potential market entry and exit signals.</p>
+          <div class="pstack">
+            <span class="stag">Python</span><span class="stag">Pandas</span><span class="stag">Power BI</span><span class="stag">CoinGecko API</span><span class="stag">RSI</span><span class="stag">Moving Averages</span><span class="stag">Market Analysis</span>
+          </div>
+        </div>
+        <div class="plc">
+          <a href="https://vaibhavgourkhede.netlify.app" target="_blank" class="plink pllive">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Site
+          </a>
+        </div>
+      </div>
+
+      <!-- Car Price Prediction -->
+      <div class="pcard purple reveal">
+        <div>
+          <div class="ph">
+            <span class="pico">&#128664;</span>
+            <span class="pname">Car Price Prediction</span>
+            <span class="pbadge bpu">ML + Power BI</span>
+          </div>
+          <p class="pdesc">Analyzed used-car market data and built an ML regression model to predict car prices, removing dependency on brokers. Created an interactive Power BI dashboard to visualize price distribution, brand-wise trends, and feature correlations &mdash; making market pricing transparent and data-driven.</p>
+          <div class="pstack">
+            <span class="stag">Python</span><span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">Scikit-learn</span><span class="stag">Power BI</span><span class="stag">Regression</span><span class="stag">Feature Engineering</span>
+          </div>
+        </div>
+        <div class="plc">
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiMzlhOWFhZWItM2NlZS00YTdjLWIwNjMtYTJkNTcwMDEwNWM1IiwidCI6ImYwZDBkNjE5LWRiMTAtNDA5ZC05ZDQ1LTMwNzZkMTdmMjFiMyJ9" target="_blank" class="plink plpbi">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="18" y="3" width="4" height="18"/><rect x="10" y="8" width="4" height="13"/><rect x="2" y="13" width="4" height="8"/></svg>
+            Power BI
+          </a>
+          <a href="https://github.com/vabha1409" target="_blank" class="plink plgh">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Experience &amp; Education</div>
+      <h2 class="sec-h">Journey So Far</h2>
+      <p class="sec-sub">From IBM AI/ML internship to building production-grade blockchain toolkits.</p>
+    </div>
+    <div class="exp-g">
+      <div class="reveal">
+        <div class="tl">
+          <div class="tli">
+            <div class="tld"></div>
+            <div class="tldate">MAY 2025 &ndash; PRESENT</div>
+            <div class="tlrole">Sales Back Office Executive</div>
+            <div class="tlorg">CDET Explosive Industries Pvt Ltd &middot; Nagpur</div>
+            <ul class="tlpts">
+              <li>Operated Lighthouse ERP system managing end-to-end sales workflows including Order Acknowledgements and Sales Orders.</li>
+              <li>Created Production Indents, managed party account ledgers, and handled Magazine additions in ERP.</li>
+              <li>Maintained accurate records ensuring data integrity across sales and inventory modules.</li>
+            </ul>
+          </div>
+          <div class="tli">
+            <div class="tld b"></div>
+            <div class="tldate" style="color:var(--blue)">MAY 2024 &ndash; SEP 2024</div>
+            <div class="tlrole">AI/ML Intern</div>
+            <div class="tlorg">IBM &middot; NSTI Mumbai</div>
+            <ul class="tlpts">
+              <li>Completed 5-month IBM AI/ML internship implementing supervised learning &mdash; Random Forest, Decision Trees.</li>
+              <li>Evaluated models using precision, recall, and F1-score; improved accuracy through feature engineering.</li>
+              <li>Built a real-time AI project using Python, Scikit-learn, and TensorFlow with end-to-end ML pipeline experience.</li>
+            </ul>
+          </div>
+          <div class="tli">
+            <div class="tld p"></div>
+            <div class="tldate" style="color:var(--purple)">OCT 2024</div>
+            <div class="tlrole">Advanced Diploma &mdash; IT &amp; Cloud Computing</div>
+            <div class="tlorg">National Skill Training Institute (NSTI), Mumbai</div>
+          </div>
+          <div class="tli">
+            <div class="tld p"></div>
+            <div class="tldate" style="color:var(--purple)">FEB 2022</div>
+            <div class="tlrole">Machinist Trade Certificate (ITI) &mdash; 88%</div>
+            <div class="tlorg">Industrial Training Institute &middot; Nagpur</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div style="font-family:var(--mono);font-size:.7rem;color:var(--green);letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px">// certifications</div>
+        <div class="cert-panel">
+          <div class="cp-head">IBM &amp; Microsoft Certifications</div>
+          <div class="ci"><div class="cico">&#129302;</div><div><div class="cname">AI and Its Impact on Daily Life</div><div class="ciss">IBM</div></div></div>
+          <div class="ci"><div class="cico">&#129504;</div><div><div class="cname">AI Express: AI Essentials</div><div class="ciss">IBM</div></div></div>
+          <div class="ci"><div class="cico">&#9881;&#65039;</div><div><div class="cname">Artificial Intelligence in Practice</div><div class="ciss">IBM</div></div></div>
+          <div class="ci"><div class="cico">&#128218;</div><div><div class="cname">Artificial Intelligence Tutorial</div><div class="ciss">IBM</div></div></div>
+          <div class="ci"><div class="cico">&#128202;</div><div><div class="cname">Learning Data Analytics: Foundation</div><div class="ciss">LinkedIn Learning &middot; Microsoft</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="con-g">
+      <div class="reveal">
+        <div class="eyebrow">Let's Connect</div>
+        <h2 class="sec-h">Open to Crypto &amp;<br>Data Analyst Roles</h2>
+        <p style="color:var(--tx2);font-size:.93rem;line-height:1.8">Actively seeking <strong style="color:var(--tx)">remote</strong> opportunities as a Crypto Analyst or Data Analyst. If you're building in DeFi, crypto, or data-driven finance &mdash; let's talk.</p>
+        <div class="clinks">
+          <a href="mailto:gourkhedevaibhav@gmail.com" class="clink">
+            <div class="cico2" style="background:rgba(0,255,135,.08);border:1px solid var(--gbdr)">&#128231;</div>
+            <div><div>gourkhedevaibhav@gmail.com</div><div class="csub">email</div></div>
+          </a>
+          <a href="https://github.com/vabha1409" target="_blank" class="clink">
+            <div class="cico2" style="background:rgba(255,255,255,.04);border:1px solid var(--bdr2)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <div><div>github.com/vabha1409</div><div class="csub">github</div></div>
+          </a>
+          <a href="https://vaibhavgourkhede.netlify.app" target="_blank" class="clink">
+            <div class="cico2" style="background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2)">&#127760;</div>
+            <div><div>vaibhavgourkhede.netlify.app</div><div class="csub">live portfolio</div></div>
+          </a>
+          <a href="tel:+919158387386" class="clink">
+            <div class="cico2" style="background:rgba(155,93,229,.08);border:1px solid rgba(155,93,229,.2)">&#128241;</div>
+            <div><div>+91 9158387386</div><div class="csub">phone</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div style="font-family:var(--mono);font-size:.7rem;color:var(--green);letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px">// send_message()</div>
+        <div class="form">
+          <div class="frow">
+            <div><div class="flbl">Name</div><input type="text" placeholder="Your name"></div>
+            <div><div class="flbl">Email</div><input type="email" placeholder="your@email.com"></div>
+          </div>
+          <div><div class="flbl">Role / Opportunity</div><input type="text" placeholder="e.g. Crypto Analyst at XYZ"></div>
+          <div><div class="flbl">Message</div><textarea placeholder="Tell me about the opportunity or project..."></textarea></div>
+          <button class="btn btn-g" style="width:100%;justify-content:center" onclick="alert('Message sent! Vaibhav will get back to you soon.')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">&#169; 2025 <span>Vaibhav D. Gourkhede</span> &middot; Nagpur, India</div>
+  <div class="fl" style="font-family:var(--mono);font-size:.7rem">Built with HTML &middot; CSS &middot; JS</div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }});
+}, { threshold: 0.07, rootMargin: '0px 0px -36px 0px' });
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = (i % 3) * 0.09 + 's';
+  obs.observe(el);
+});
+const secs = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 110) cur = s.id; });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--tx)' : '';
+  });
+});
+</script>
+</body>
+</html>
