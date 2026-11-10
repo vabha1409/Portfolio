@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vaibhav Gourkhede | Data &amp; Crypto Analyst</title>
+<title>Vaibhav Gourkhede | Data Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -41,7 +41,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 /* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;padding:110px 60px 70px;max-width:1280px;margin:0 auto;position:relative;z-index:1;gap:48px}
 .hero-l{flex:1;max-width:680px}
-.hero-r{flex:0 0 260px;display:flex;flex-direction:column;gap:10px}
+.hero-r{flex:0 0 300px;animation:fup .5s .3s ease both}
 .tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:0.72rem;color:var(--green);background:var(--gdim);border:1px solid var(--gbdr);border-radius:5px;padding:6px 14px;margin-bottom:26px;animation:fup .5s ease both}
 .tag::before{content:'>';color:var(--tx3)}
 h1{font-family:var(--sans);font-size:clamp(2.5rem,5vw,4.2rem);font-weight:800;line-height:1.04;letter-spacing:-.03em;margin-bottom:8px;animation:fup .5s .08s ease both}
@@ -61,17 +61,6 @@ h1{font-family:var(--sans);font-size:clamp(2.5rem,5vw,4.2rem);font-weight:800;li
 .met-v{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--green)}
 .met-l{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tx3);margin-top:3px}
 @keyframes fup{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-
-/* TICKER */
-.tick{background:var(--surf2);border:1px solid var(--bdr);border-radius:10px;padding:13px 16px;font-family:var(--mono);font-size:.73rem;animation:fup .5s .3s ease both;transition:border-color .2s}
-.tick:hover{border-color:var(--bdr2)}
-.tick-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
-.tick-sym{color:var(--tx2)}
-.up{color:var(--green);font-size:.68rem}
-.dn{color:var(--red);font-size:.68rem}
-.tick-p{font-size:.95rem;color:var(--tx);font-weight:700}
-.tick-bar{height:2px;background:var(--surf3);border-radius:2px;overflow:hidden;margin-top:7px}
-.tick-f{height:100%;border-radius:2px}
 
 /* SECTIONS */
 .section{position:relative;z-index:1;padding:88px 0}
@@ -196,7 +185,7 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
 @media(max-width:960px){
   nav{padding:0 20px}.nav-links{display:none}
   #hero{padding:90px 20px 60px;flex-direction:column}
-  .hero-r{margin:0;flex-direction:row;overflow-x:auto;flex:unset;width:100%}
+  .hero-r{flex:unset;width:100%}
   .container{padding:0 20px}
   .about-g,.sk-grid,.exp-g,.con-g{grid-template-columns:1fr}
   .pcard{grid-template-columns:1fr}
@@ -223,11 +212,11 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
 <!-- HERO -->
 <section id="hero">
   <div class="hero-l">
-    <div class="tag">open_to_work &nbsp;&#47;&#47;&nbsp; crypto &middot; data &middot; remote<span class="blink"></span></div>
-    <h1><span class="gtext">Data &amp; Crypto</span><br>Analyst</h1>
-    <p class="subtitle">// AI &middot; On-Chain Analytics &middot; ML &middot; Power BI</p>
+    <div class="tag">open_to_work &nbsp;&#47;&#47;&nbsp; data analytics apprenticeship<span class="blink"></span></div>
+    <h1><span class="gtext">Data</span><br>Analyst</h1>
+    <p class="subtitle">// SQL &middot; Python &middot; Power BI &middot; Sheets</p>
     <p class="hero-bio">
-      <strong>IBM AI/ML Intern</strong> turned blockchain data analyst. I build production-grade on-chain toolkits, ML-powered prediction models, and live market dashboards. Specializing in <strong>crypto analytics, DeFi research,</strong> and <strong>data-driven investment insights</strong> backed by Python, SQL, and multi-chain API expertise.
+      <strong>Data Analyst and AI/ML practitioner</strong> with hands-on experience in SQL, Python, spreadsheets, and Power BI, backed by a <strong>5-month IBM SkillsBuild AI/ML internship</strong> and operations data experience. I query multi-table datasets, quantify <strong>marketing funnel and operational KPIs,</strong> build automated data pipelines, and design executive dashboards.
     </p>
     <div class="btns">
       <a href="#projects" class="btn btn-g">
@@ -244,32 +233,20 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
       </a>
     </div>
     <div class="metrics">
-      <div class="met"><div class="met-v">5+</div><div class="met-l">IBM Certs</div></div>
-      <div class="met"><div class="met-v">8</div><div class="met-l">APIs Integrated</div></div>
+      <div class="met"><div class="met-v">12K</div><div class="met-l">Ad Records Queried</div></div>
       <div class="met"><div class="met-v">3</div><div class="met-l">Projects Built</div></div>
-      <div class="met"><div class="met-v">IBM</div><div class="met-l">AI/ML Intern</div></div>
+      <div class="met"><div class="met-v">160+</div><div class="met-l">ERP Txns / Month</div></div>
+      <div class="met"><div class="met-v">5 mo</div><div class="met-l">IBM Internship</div></div>
     </div>
   </div>
   <div class="hero-r">
-    <div class="tick">
-      <div class="tick-top"><span class="tick-sym">BTC/USD</span><span class="up">&#9650; +2.4%</span></div>
-      <div class="tick-p">$104,820</div>
-      <div class="tick-bar"><div class="tick-f" style="width:78%;background:var(--green)"></div></div>
-    </div>
-    <div class="tick">
-      <div class="tick-top"><span class="tick-sym">ETH/USD</span><span class="up">&#9650; +1.9%</span></div>
-      <div class="tick-p">$3,840</div>
-      <div class="tick-bar"><div class="tick-f" style="width:62%;background:var(--blue)"></div></div>
-    </div>
-    <div class="tick">
-      <div class="tick-top"><span class="tick-sym">SOL/USD</span><span class="dn">&#9660; -0.7%</span></div>
-      <div class="tick-p">$172.50</div>
-      <div class="tick-bar"><div class="tick-f" style="width:44%;background:var(--purple)"></div></div>
-    </div>
-    <div class="tick" style="background:rgba(0,255,135,0.05);border-color:var(--gbdr)">
-      <div class="tick-top"><span class="tick-sym" style="color:var(--green)">CHAINPULSE</span><span class="up">LIVE &#9679;</span></div>
-      <div class="tick-p" style="font-size:.78rem;color:var(--tx2);margin-top:3px">Multi-chain CLI Toolkit</div>
-      <div style="font-family:var(--mono);font-size:.65rem;color:var(--tx3);margin-top:4px">ETH &middot; BTC &middot; SOL &middot; ARB</div>
+    <div class="info-panel">
+      <div class="ip-head">// toolkit.json</div>
+      <div class="ir"><span class="ik">languages</span><span class="iv">SQL &middot; Python</span></div>
+      <div class="ir"><span class="ik">spreadsheets</span><span class="iv">Google Sheets &middot; Excel</span></div>
+      <div class="ir"><span class="ik">visualization</span><span class="iv">Power BI (DAX)</span></div>
+      <div class="ir"><span class="ik">libraries</span><span class="iv">Pandas &middot; NumPy</span></div>
+      <div class="ir"><span class="ik">analysis</span><span class="iv">Funnel &middot; Cohort &middot; EDA</span></div>
     </div>
   </div>
 </section>
@@ -280,22 +257,22 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
     <div class="about-g">
       <div class="reveal">
         <div class="eyebrow">About Me</div>
-        <h2 class="sec-h">Analyst. Builder.<br>Blockchain Explorer.</h2>
+        <h2 class="sec-h">Analyst. Builder.<br>Problem Solver.</h2>
         <div class="about-body">
-          <p>I'm a <strong>Data &amp; Crypto Analyst</strong> from Nagpur, India with an IBM AI/ML internship and a deep passion for on-chain data. I don't just read charts &mdash; I build the tools that generate them.</p>
-          <p>My flagship project <strong>ChainPulse</strong> is a production-grade multi-chain CLI toolkit covering whale tracking, smart money detection, DeFi health analysis, and cross-chain capital rotation signals &mdash; integrated with 8 live data sources across ETH, BTC, SOL, and ARB.</p>
-          <p>I'm seeking a <strong>remote Crypto Analyst or Data Analyst role</strong> where I can apply on-chain analytics, ML modeling, and data visualization to drive real investment decisions.</p>
+          <p>I'm a <strong>Data Analyst and AI/ML practitioner</strong> from Nagpur, India. I work with SQL, Python, spreadsheets (Google Sheets, MS Excel), and Power BI, with a 5-month IBM SkillsBuild AI/ML project internship and operations data experience from my current back-office role.</p>
+          <p>My projects include a <strong>Multi-Channel Ad Spend ROI &amp; Conversion Funnel Analysis</strong> (12,000 records, 24 campaigns, 8.80x blended ROAS), <strong>ChainPulse</strong>, an automated multi-source data pipeline, and a <strong>Car Price Prediction</strong> model with an interactive Power BI dashboard.</p>
+          <p>I'm seeking a <strong>full-time, in-office Data Analytics Apprenticeship</strong> where I can turn complex business data into actionable recommendations.</p>
         </div>
         <div class="chips">
-          <span class="chip cg">On-Chain Analytics</span>
-          <span class="chip cb">AI / ML</span>
-          <span class="chip cg">DeFi Research</span>
-          <span class="chip cp">Blockchain</span>
-          <span class="chip co">Power BI</span>
+          <span class="chip cg">SQL</span>
+          <span class="chip cp">Funnel &amp; Cohort Analysis</span>
+          <span class="chip cg">ROAS / CPA Attribution</span>
+          <span class="chip co">Power BI (DAX)</span>
+          <span class="chip co">Google Sheets / Excel</span>
           <span class="chip cb">Python</span>
-          <span class="chip cg">Whale Tracking</span>
-          <span class="chip cp">Smart Money Detection</span>
-          <span class="chip co">Technical Analysis</span>
+          <span class="chip cp">EDA</span>
+          <span class="chip cp">Anomaly Detection</span>
+          <span class="chip cb">AI / ML</span>
         </div>
       </div>
       <div class="reveal">
@@ -305,9 +282,10 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
           <div class="ir"><span class="ik">email</span><span class="iv" style="font-size:.78rem">gourkhedevaibhav@gmail.com</span></div>
           <div class="ir"><span class="ik">phone</span><span class="iv">+91 9158387386</span></div>
           <div class="ir"><span class="ik">github</span><span class="iv">vabha1409</span></div>
-          <div class="ir"><span class="ik">portfolio</span><span class="iv" style="font-size:.78rem">vaibhavgourkhede.netlify.app</span></div>
-          <div class="ir"><span class="ik">seeking</span><span class="iv" style="font-size:.81rem">Crypto / Data Analyst</span></div>
-          <div class="ir"><span class="ik">preferred</span><span class="iv">Remote</span></div>
+          <div class="ir"><span class="ik">portfolio</span><span class="iv" style="font-size:.78rem">vabha1409.github.io/Portfolio</span></div>
+          <div class="ir"><span class="ik">languages</span><span class="iv" style="font-size:.78rem">English &middot; Hindi &middot; Marathi</span></div>
+          <div class="ir"><span class="ik">seeking</span><span class="iv" style="font-size:.78rem">Data Analytics Apprenticeship</span></div>
+          <div class="ir"><span class="ik">availability</span><span class="iv" style="font-size:.81rem">Full-time &middot; In-office</span></div>
           <div class="ir"><span class="ik">status</span><span class="iv"><span class="sdot">Open to Work</span></span></div>
         </div>
       </div>
@@ -321,31 +299,37 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
     <div class="reveal">
       <div class="eyebrow">Tech Stack</div>
       <h2 class="sec-h">Skills &amp; Expertise</h2>
-      <p class="sec-sub">Spanning on-chain analytics, data science, machine learning, and web development.</p>
+      <p class="sec-sub">SQL, spreadsheets, BI dashboards, statistics, and machine learning.</p>
     </div>
     <div class="sk-grid">
       <div class="sk-block reveal">
-        <div class="sk-title"><span style="color:var(--green)">&#9679;</span> Crypto &amp; Blockchain</div>
+        <div class="sk-title"><span style="color:var(--green)">&#9679;</span> Programming &amp; Databases</div>
         <div class="pills">
-          <span class="pill">On-Chain Data Analysis</span><span class="pill">Multi-chain API Integration</span><span class="pill">Whale Tracking</span><span class="pill">Smart Money Detection</span><span class="pill">DeFi Protocol Research</span><span class="pill">Gini Coefficient</span><span class="pill">Tokenomics</span><span class="pill">CoinGecko API</span><span class="pill">Etherscan API</span><span class="pill">DeFiLlama API</span><span class="pill">Glassnode Metrics</span><span class="pill">RSI &middot; MACD &middot; Moving Averages</span><span class="pill">Cross-chain Capital Rotation</span>
+          <span class="pill">SQL</span><span class="pill">MySQL</span><span class="pill">JOINs</span><span class="pill">CTEs</span><span class="pill">Window Functions</span><span class="pill">HAVING</span><span class="pill">Aggregations</span><span class="pill">Python</span>
         </div>
       </div>
       <div class="sk-block reveal">
-        <div class="sk-title"><span style="color:var(--blue)">&#9679;</span> Data Science &amp; ML</div>
+        <div class="sk-title"><span style="color:var(--orange)">&#9679;</span> Spreadsheets &amp; BI Visualization</div>
         <div class="pills">
-          <span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span><span class="pill">Scikit-learn</span><span class="pill">TensorFlow</span><span class="pill">PyTorch</span><span class="pill">Random Forest</span><span class="pill">Decision Trees</span><span class="pill">Regression</span><span class="pill">Classification</span><span class="pill">Feature Engineering</span><span class="pill">Jupyter Notebook</span><span class="pill">Google Colab</span>
+          <span class="pill">Google Sheets</span><span class="pill">SUMIFS</span><span class="pill">XLOOKUP</span><span class="pill">Pivot Tables</span><span class="pill">Funnel Modeling</span><span class="pill">MS Excel</span><span class="pill">Cargo / District Tracking</span><span class="pill">Route Charts</span><span class="pill">Power BI</span><span class="pill">DAX</span><span class="pill">Interactive Dashboards</span><span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span>
         </div>
       </div>
       <div class="sk-block reveal">
-        <div class="sk-title"><span style="color:var(--orange)">&#9679;</span> Visualization &amp; Databases</div>
+        <div class="sk-title"><span style="color:var(--blue)">&#9679;</span> Analytical &amp; Statistical Methods</div>
         <div class="pills">
-          <span class="pill">Power BI</span><span class="pill">MS Excel</span><span class="pill">SQL</span><span class="pill">MySQL</span><span class="pill">MongoDB</span><span class="pill">IBM Cloud</span>
+          <span class="pill">Funnel &amp; Cohort Analysis</span><span class="pill">ROAS / CPA Media Attribution</span><span class="pill">Exploratory Data Analysis (EDA)</span><span class="pill">Data Cleaning</span><span class="pill">Statistical Analysis</span><span class="pill">Gini Coefficient</span><span class="pill">Anomaly Detection</span><span class="pill">Regression</span><span class="pill">Random Forest</span><span class="pill">Decision Trees</span><span class="pill">Scikit-learn</span>
         </div>
       </div>
       <div class="sk-block reveal">
-        <div class="sk-title"><span style="color:var(--purple)">&#9679;</span> Languages &amp; Frameworks</div>
+        <div class="sk-title"><span style="color:var(--purple)">&#9679;</span> Tools &amp; Platforms</div>
         <div class="pills">
-          <span class="pill">JavaScript</span><span class="pill">PHP</span><span class="pill">HTML5 / CSS3</span><span class="pill">Django</span><span class="pill">Flask</span><span class="pill">Laravel</span><span class="pill">Angular</span><span class="pill">Bootstrap</span><span class="pill">Express</span><span class="pill">jQuery</span><span class="pill">Git &amp; GitHub</span><span class="pill">Linux</span>
+          <span class="pill">Google Workspace</span><span class="pill">Google Colab</span><span class="pill">REST APIs</span><span class="pill">Git &amp; GitHub</span><span class="pill">Linux</span><span class="pill">Lighthouse ERP</span>
+        </div>
+      </div>
+      <div class="sk-block reveal" style="grid-column:1/-1">
+        <div class="sk-title"><span style="color:var(--green)">&#9679;</span> Languages (Spoken)</div>
+        <div class="pills">
+          <span class="pill">English</span><span class="pill">Hindi</span><span class="pill">Marathi</span>
         </div>
       </div>
     </div>
@@ -358,21 +342,46 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
     <div class="reveal">
       <div class="eyebrow">Projects</div>
       <h2 class="sec-h">Things I've Built</h2>
-      <p class="sec-sub">Production-grade tools from multi-chain CLI analysis to ML prediction models and live dashboards.</p>
+      <p class="sec-sub">Funnel analytics, data pipelines, and ML prediction models with interactive dashboards.</p>
     </div>
     <div class="proj-list">
 
-      <!-- ChainPulse -->
+      <!-- Ad Spend ROI -->
       <div class="pcard reveal">
         <div>
           <div class="ph">
-            <span class="pico">&#9935;&#65039;</span>
-            <span class="pname">ChainPulse</span>
+            <span class="pico">&#128200;</span>
+            <span class="pname">Multi-Channel Ad Spend ROI &amp; Conversion Funnel Analysis</span>
             <span class="pbadge bf">Featured</span>
           </div>
-          <p class="pdesc">Production-grade multi-chain on-chain analysis CLI toolkit with 6 modules: whale tracker, DeFi health analyzer, token distribution analyzer (Gini coefficient), smart money detector, cross-chain aggregator, and deep wallet profiler. Integrates 8 live data sources &mdash; Etherscan, DeFiLlama, CoinGecko, Blockstream, Solana RPC, BscScan, Arbiscan, Moralis &mdash; with TTL disk caching and automatic rate-limit handling across ETH, BTC, SOL, and ARB.</p>
+          <p class="pdesc">Queried 12,000 daily ad performance and funnel records across 24 campaigns and 5 channels (&#8377;2.13 Cr spend, &#8377;18.72 Cr revenue, 8.80x blended ROAS) using 3-table SQL JOINs, CTEs, Window Functions (LAG, DENSE_RANK), and HAVING filters. Pinpointed a 90.3% landing-page-to-cart drop-off on Google Display (0.21x ROAS) and flagged 7 underperforming campaigns consuming &#8377;39.57 Lakhs (18.6% of budget) at &lt;0.50x ROAS. Built a dynamic Google Sheets funnel tracker (SUMIFS, IFERROR), an interactive Power BI dashboard (DAX), and a budget reallocation model showing that shifting 50% of wasted spend (&#8377;19.78L) into Google Search (12.20x ROAS) projects +&#8377;2.35 Cr in net incremental revenue.</p>
           <div class="pstack">
-            <span class="stag">Python</span><span class="stag">Etherscan API</span><span class="stag">DeFiLlama API</span><span class="stag">CoinGecko API</span><span class="stag">Blockstream</span><span class="stag">Solana RPC</span><span class="stag">BscScan</span><span class="stag">Moralis</span><span class="stag">Rich CLI</span><span class="stag">Multi-chain</span>
+            <span class="stag">SQL</span><span class="stag">CTEs</span><span class="stag">Window Functions</span><span class="stag">Google Sheets</span><span class="stag">Power BI</span><span class="stag">DAX</span><span class="stag">Python</span><span class="stag">Funnel Analysis</span>
+          </div>
+        </div>
+        <div class="plc">
+          <a href="https://github.com/vabha1409/ad-spend-roi-funnel-analytics" target="_blank" class="plink plgh">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub Repo
+          </a>
+          <a href="https://docs.google.com/spreadsheets/d/1vMFoFTKc2Z9y9fEcK1pwSrskuCS6LGA-E73Ts2IGoas/edit" target="_blank" class="plink pllive">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="10" y1="3" x2="10" y2="21"/></svg>
+            Google Sheet
+          </a>
+        </div>
+      </div>
+
+      <!-- ChainPulse -->
+      <div class="pcard blue reveal">
+        <div>
+          <div class="ph">
+            <span class="pico">&#9881;&#65039;</span>
+            <span class="pname">ChainPulse &mdash; Multi-Source Data Analytics CLI Toolkit</span>
+            <span class="pbadge bl">Data Pipeline</span>
+          </div>
+          <p class="pdesc">Built a modular Python CLI analytics toolkit with 6 analysis modules covering large-holder tracking, protocol health metrics, distribution concentration, and entity profiling. Integrated 8 live REST API data sources with TTL-based disk caching, automatic rate-limit handling, statistical Gini coefficient concentration modeling, and 4-factor anomaly scoring.</p>
+          <div class="pstack">
+            <span class="stag">Python</span><span class="stag">REST APIs</span><span class="stag">Statistical Modeling</span><span class="stag">CLI</span><span class="stag">Anomaly Detection</span><span class="stag">Gini Coefficient</span>
           </div>
         </div>
         <div class="plc">
@@ -383,48 +392,23 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
         </div>
       </div>
 
-      <!-- Crypto Dashboard -->
-      <div class="pcard blue reveal">
-        <div>
-          <div class="ph">
-            <span class="pico">&#128202;</span>
-            <span class="pname">Crypto Market Dashboard</span>
-            <span class="pbadge bl">Live</span>
-          </div>
-          <p class="pdesc">Cryptocurrency analytics dashboard fetching live price, volume, and market cap data via CoinGecko API. Performed on-chain trend analysis and visualized BTC/ETH price movements and dominance metrics in Power BI. Integrated RSI and moving average indicators to identify potential market entry and exit signals.</p>
-          <div class="pstack">
-            <span class="stag">Python</span><span class="stag">Pandas</span><span class="stag">Power BI</span><span class="stag">CoinGecko API</span><span class="stag">RSI</span><span class="stag">Moving Averages</span><span class="stag">Market Analysis</span>
-          </div>
-        </div>
-        <div class="plc">
-          <a href="https://vaibhavgourkhede.netlify.app" target="_blank" class="plink pllive">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Site
-          </a>
-        </div>
-      </div>
-
       <!-- Car Price Prediction -->
       <div class="pcard purple reveal">
         <div>
           <div class="ph">
             <span class="pico">&#128664;</span>
-            <span class="pname">Car Price Prediction</span>
+            <span class="pname">Car Price Prediction &amp; Market Dashboard</span>
             <span class="pbadge bpu">ML + Power BI</span>
           </div>
-          <p class="pdesc">Analyzed used-car market data and built an ML regression model to predict car prices, removing dependency on brokers. Created an interactive Power BI dashboard to visualize price distribution, brand-wise trends, and feature correlations &mdash; making market pricing transparent and data-driven.</p>
+          <p class="pdesc">Queried, cleaned, and analyzed used-car market data using SQL, Pandas, and NumPy, and trained a supervised ML regression model to estimate fair vehicle prices without broker intermediaries. Created an interactive Power BI dashboard with dynamic filters to visualize price distributions, brand-wise depreciation trends, and feature correlations for buyer decision-making.</p>
           <div class="pstack">
-            <span class="stag">Python</span><span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">Scikit-learn</span><span class="stag">Power BI</span><span class="stag">Regression</span><span class="stag">Feature Engineering</span>
+            <span class="stag">Python</span><span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">SQL</span><span class="stag">Scikit-learn</span><span class="stag">Power BI</span>
           </div>
         </div>
         <div class="plc">
           <a href="https://app.powerbi.com/view?r=eyJrIjoiMzlhOWFhZWItM2NlZS00YTdjLWIwNjMtYTJkNTcwMDEwNWM1IiwidCI6ImYwZDBkNjE5LWRiMTAtNDA5ZC05ZDQ1LTMwNzZkMTdmMjFiMyJ9" target="_blank" class="plink plpbi">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="18" y="3" width="4" height="18"/><rect x="10" y="8" width="4" height="13"/><rect x="2" y="13" width="4" height="8"/></svg>
             Power BI
-          </a>
-          <a href="https://github.com/vabha1409" target="_blank" class="plink plgh">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
           </a>
         </div>
       </div>
@@ -439,7 +423,7 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
     <div class="reveal">
       <div class="eyebrow">Experience &amp; Education</div>
       <h2 class="sec-h">Journey So Far</h2>
-      <p class="sec-sub">From IBM AI/ML internship to building production-grade blockchain toolkits.</p>
+      <p class="sec-sub">From operations data and an IBM AI/ML internship to pipelines, models, and dashboards.</p>
     </div>
     <div class="exp-g">
       <div class="reveal">
@@ -450,27 +434,36 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
             <div class="tlrole">Sales Back Office Executive</div>
             <div class="tlorg">CDET Explosive Industries Pvt Ltd &middot; Nagpur</div>
             <ul class="tlpts">
-              <li>Operated Lighthouse ERP system managing end-to-end sales workflows including Order Acknowledgements and Sales Orders.</li>
-              <li>Created Production Indents, managed party account ledgers, and handled Magazine additions in ERP.</li>
-              <li>Maintained accurate records ensuring data integrity across sales and inventory modules.</li>
+              <li>Process 3&ndash;4 Sales Orders and 3&ndash;4 Production Indents daily (~160&ndash;200+ monthly ERP transactions) in Lighthouse ERP, managing end-to-end Order Acknowledgements, party account ledgers, and Magazine inventory additions.</li>
+              <li>Build and maintain MS Excel Cargo Sheets, District-wise Dispatch Sheets, and Route Charts to track regional order allocation, optimize delivery routes, and monitor dispatch volumes.</li>
+              <li>Audit and reconcile daily back-office records across sales and inventory modules, ensuring data integrity and accurate operational reporting.</li>
             </ul>
           </div>
           <div class="tli">
             <div class="tld b"></div>
-            <div class="tldate" style="color:var(--blue)">MAY 2024 &ndash; SEP 2024</div>
-            <div class="tlrole">AI/ML Intern</div>
-            <div class="tlorg">IBM &middot; NSTI Mumbai</div>
+            <div class="tldate" style="color:var(--blue)">MAY 2024 &ndash; OCT 2024</div>
+            <div class="tlrole">AI/ML Project Intern (ADIT OJT)</div>
+            <div class="tlorg">IBM SkillsBuild &amp; Edunet Foundation &middot; NSTI Mumbai</div>
             <ul class="tlpts">
-              <li>Completed 5-month IBM AI/ML internship implementing supervised learning &mdash; Random Forest, Decision Trees.</li>
-              <li>Evaluated models using precision, recall, and F1-score; improved accuracy through feature engineering.</li>
-              <li>Built a real-time AI project using Python, Scikit-learn, and TensorFlow with end-to-end ML pipeline experience.</li>
+              <li>Completed a 5-month Project-Based Internship on Artificial Intelligence (May 13 &ndash; Oct 13, 2024) as part of the ADIT curriculum (DGT &amp; MSDE); extracted, cleaned, and structured tabular datasets using Python (Pandas, NumPy) and SQL.</li>
+              <li>Implemented supervised learning algorithms (Random Forest, Decision Trees) and evaluated models using precision, recall, and F1-score, improving predictive accuracy through feature engineering and outlier treatment.</li>
+              <li>Developed an end-to-end AI/ML pipeline using Python and Scikit-learn, automating data preprocessing, feature selection, and model inference.</li>
             </ul>
           </div>
           <div class="tli">
             <div class="tld p"></div>
-            <div class="tldate" style="color:var(--purple)">OCT 2024</div>
-            <div class="tlrole">Advanced Diploma &mdash; IT &amp; Cloud Computing</div>
-            <div class="tlorg">National Skill Training Institute (NSTI), Mumbai</div>
+            <div class="tldate" style="color:var(--purple)">JAN 2026 &ndash; PRESENT</div>
+            <div class="tlrole">Bachelor of Computer Applications (BCA)</div>
+            <div class="tlorg">IGNOU, Nagpur &middot; Open &amp; Distance Learning &middot; available for full-time in-office work</div>
+          </div>
+          <div class="tli">
+            <div class="tld p"></div>
+            <div class="tldate" style="color:var(--purple)">GRADUATED OCT 2024</div>
+            <div class="tlrole">Advanced Diploma &mdash; IT, Networking &amp; Cloud Computing (ADIT)</div>
+            <div class="tlorg">NSTI Mumbai &middot; DGT, MSDE</div>
+            <ul class="tlpts">
+              <li>Completed a 2-year full-time technical diploma covering Data Analytics, Python, SQL, Networking, Cloud Computing, and a 5-month AI/ML OJT.</li>
+            </ul>
           </div>
           <div class="tli">
             <div class="tld p"></div>
@@ -478,17 +471,22 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
             <div class="tlrole">Machinist Trade Certificate (ITI) &mdash; 88%</div>
             <div class="tlorg">Industrial Training Institute &middot; Nagpur</div>
           </div>
+          <div class="tli">
+            <div class="tld p"></div>
+            <div class="tldate" style="color:var(--purple)">JULY 2019</div>
+            <div class="tlrole">12th &mdash; Science</div>
+            <div class="tlorg">C.P. &amp; Berar College &middot; Nagpur</div>
+          </div>
         </div>
       </div>
       <div class="reveal">
         <div style="font-family:var(--mono);font-size:.7rem;color:var(--green);letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px">// certifications</div>
         <div class="cert-panel">
-          <div class="cp-head">IBM &amp; Microsoft Certifications</div>
-          <div class="ci"><div class="cico">&#129302;</div><div><div class="cname">AI and Its Impact on Daily Life</div><div class="ciss">IBM</div></div></div>
-          <div class="ci"><div class="cico">&#129504;</div><div><div class="cname">AI Express: AI Essentials</div><div class="ciss">IBM</div></div></div>
+          <div class="cp-head">IBM &middot; Microsoft &middot; Edunet</div>
+          <div class="ci"><div class="cico">&#128202;</div><div><div class="cname">Learning Data Analytics: 1 Foundation</div><div class="ciss">LinkedIn &middot; Microsoft</div></div></div>
+          <div class="ci"><div class="cico">&#127891;</div><div><div class="cname">IBM SkillsBuild AI Project Internship Certificate</div><div class="ciss">Edunet &middot; DGT</div></div></div>
+          <div class="ci"><div class="cico">&#129504;</div><div><div class="cname">AI Express: Artificial Intelligence Essentials</div><div class="ciss">IBM</div></div></div>
           <div class="ci"><div class="cico">&#9881;&#65039;</div><div><div class="cname">Artificial Intelligence in Practice</div><div class="ciss">IBM</div></div></div>
-          <div class="ci"><div class="cico">&#128218;</div><div><div class="cname">Artificial Intelligence Tutorial</div><div class="ciss">IBM</div></div></div>
-          <div class="ci"><div class="cico">&#128202;</div><div><div class="cname">Learning Data Analytics: Foundation</div><div class="ciss">LinkedIn Learning &middot; Microsoft</div></div></div>
         </div>
       </div>
     </div>
@@ -501,8 +499,8 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
     <div class="con-g">
       <div class="reveal">
         <div class="eyebrow">Let's Connect</div>
-        <h2 class="sec-h">Open to Crypto &amp;<br>Data Analyst Roles</h2>
-        <p style="color:var(--tx2);font-size:.93rem;line-height:1.8">Actively seeking <strong style="color:var(--tx)">remote</strong> opportunities as a Crypto Analyst or Data Analyst. If you're building in DeFi, crypto, or data-driven finance &mdash; let's talk.</p>
+        <h2 class="sec-h">Seeking a Data<br>Analytics Apprenticeship</h2>
+        <p style="color:var(--tx2);font-size:.93rem;line-height:1.8">Seeking a <strong style="color:var(--tx)">full-time, in-office Data Analytics Apprenticeship</strong> to turn complex business data into actionable recommendations. If you're hiring &mdash; let's talk.</p>
         <div class="clinks">
           <a href="mailto:gourkhedevaibhav@gmail.com" class="clink">
             <div class="cico2" style="background:rgba(0,255,135,.08);border:1px solid var(--gbdr)">&#128231;</div>
@@ -514,9 +512,9 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
             </div>
             <div><div>github.com/vabha1409</div><div class="csub">github</div></div>
           </a>
-          <a href="https://vaibhavgourkhede.netlify.app" target="_blank" class="clink">
+          <a href="https://vabha1409.github.io/Portfolio" target="_blank" class="clink">
             <div class="cico2" style="background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2)">&#127760;</div>
-            <div><div>vaibhavgourkhede.netlify.app</div><div class="csub">live portfolio</div></div>
+            <div><div>vabha1409.github.io/Portfolio</div><div class="csub">portfolio</div></div>
           </a>
           <a href="tel:+919158387386" class="clink">
             <div class="cico2" style="background:rgba(155,93,229,.08);border:1px solid rgba(155,93,229,.2)">&#128241;</div>
@@ -531,7 +529,7 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
             <div><div class="flbl">Name</div><input type="text" placeholder="Your name"></div>
             <div><div class="flbl">Email</div><input type="email" placeholder="your@email.com"></div>
           </div>
-          <div><div class="flbl">Role / Opportunity</div><input type="text" placeholder="e.g. Crypto Analyst at XYZ"></div>
+          <div><div class="flbl">Role / Opportunity</div><input type="text" placeholder="e.g. Data Analyst at XYZ"></div>
           <div><div class="flbl">Message</div><textarea placeholder="Tell me about the opportunity or project..."></textarea></div>
           <button class="btn btn-g" style="width:100%;justify-content:center" onclick="alert('Message sent! Vaibhav will get back to you soon.')">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -545,7 +543,7 @@ footer{border-top:1px solid var(--bdr);padding:26px 60px;display:flex;justify-co
 
 <!-- FOOTER -->
 <footer>
-  <div class="fl">&#169; 2025 <span>Vaibhav D. Gourkhede</span> &middot; Nagpur, India</div>
+  <div class="fl">&#169; 2026 <span>Vaibhav D. Gourkhede</span> &middot; Nagpur, India</div>
   <div class="fl" style="font-family:var(--mono);font-size:.7rem">Built with HTML &middot; CSS &middot; JS</div>
 </footer>
 
